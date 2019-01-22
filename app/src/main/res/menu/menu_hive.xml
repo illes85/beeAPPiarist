@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuHiveWarn1"
+        android:title="Change the status of hive to WARNING1"/>
+    <item
+        android:id="@+id/menuHiveWarn2"
+        android:title="Change the status of hive to WARNING2"/>
+    <item
+        android:id="@+id/menuHiveNormal"
+        android:title="Change the status of hive to NORMAL"/>
+
+</menu>

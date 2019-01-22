@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">bee APPiarist</string>
+
+    <string-array name="Spots">
+        <item>Telephely 1</item>
+        <item>Telephely 2</item>
+        <item>Telephely 3</item>
+    </string-array>
+
+    <string-array name="Languages">
+        <item>English</item>
+        <item>Magyar</item>
+        <item>Română</item>
+    </string-array>
+
+    <string-array name="Hives">
+        <item>#1</item>
+        <item>#2</item>
+        <item>#3</item>
+    </string-array>
+
+</resources>

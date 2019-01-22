@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/field_02"
+    tools:context=".MainActivity">
+
+    <!--
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+        -->
+    <!--
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabAddHive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivHive1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+        -->
+
+
+    <ImageButton
+        android:id="@+id/btHive1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bee_hive_02"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89" />
+
+    <TextView
+        android:id="@+id/tv_hive_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btHive1"
+        app:layout_constraintEnd_toEndOf="@+id/btHive1"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="@+id/btHive1"
+        app:layout_constraintTop_toTopOf="@+id/btHive1"
+        app:layout_constraintVertical_bias="0.552"
+        tools:text="#num" />
+
+    <ToggleButton
+        android:id="@+id/iconQueen"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/icon_queen"
+        android:checked="false"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toTopOf="@+id/iconWorm"
+        app:layout_constraintEnd_toStartOf="@+id/btHive1" />
+
+    <ToggleButton
+        android:id="@+id/iconFood"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/icon_food"
+        android:checked="false"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toTopOf="@+id/iconHoney"
+        app:layout_constraintEnd_toStartOf="@+id/btHive1" />
+
+    <ToggleButton
+        android:id="@+id/iconWorm"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/icon_worm"
+        android:checked="false"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toTopOf="@+id/iconFood"
+        app:layout_constraintEnd_toStartOf="@+id/btHive1" />
+
+    <ToggleButton
+        android:id="@+id/iconHoney"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/icon_honey"
+        android:checked="false"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toTopOf="@+id/iconWarning"
+        app:layout_constraintEnd_toStartOf="@+id/btHive1" />
+
+    <ToggleButton
+        android:id="@+id/iconWarning"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/icon_warning"
+        android:checked="false"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toBottomOf="@+id/btHive1"
+        app:layout_constraintEnd_toStartOf="@+id/btHive1" />
+
+    <ImageButton
+        android:id="@+id/btNextHive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bee_hive_02_smaller"
+        app:layout_constraintBottom_toBottomOf="@+id/btHive1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btHive1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&#8680;\nnext"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btNextHive"
+        app:layout_constraintEnd_toEndOf="@+id/btNextHive"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="@+id/btNextHive"
+        app:layout_constraintTop_toTopOf="@+id/btNextHive"
+        app:layout_constraintVertical_bias="0.49" />
+
+    <ImageButton
+        android:id="@+id/btPrevHive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bee_hive_02_smaller"
+        app:layout_constraintBottom_toBottomOf="@+id/btNextHive"
+        app:layout_constraintEnd_toStartOf="@+id/btHive1"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&#8678;\nprev"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btPrevHive"
+        app:layout_constraintEnd_toEndOf="@+id/btPrevHive"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="@+id/btPrevHive"
+        app:layout_constraintTop_toTopOf="@+id/btPrevHive"
+        app:layout_constraintVertical_bias="0.49" />
+
+    <!--
+    <TextView
+        android:id="@+id/tvAddNewHive"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Add new hive"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivHive1"
+        app:layout_constraintTop_toBottomOf="@+id/fabAddHive"
+        app:layout_constraintVertical_bias="0.0" />
+        -->
+
+
+    <Spinner
+        android:id="@+id/spinnerTelep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:drawable/spinner_background"
+        android:entries="@array/Spots"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        -->
+
+    <Spinner
+        android:id="@+id/spinner_hives"
+        android:layout_width="58dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:drawable/spinner_background"
+        android:entries="@array/Hives"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btHive1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 1st popup -->
+    <GridLayout
+        android:id="@+id/grid_layout_hive_inside"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:columnCount="4"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btHive1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTelep"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/icon_strength_01" />
+
+        <TextView
+            android:layout_columnSpan="3"
+            android:layout_marginLeft="75dp"
+            android:text="Family strength: -------"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <!-- weak 33%, average 66%, strong 100% -->
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="285dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnSpan="3"
+            android:layout_gravity="top|left"
+            android:progress="66"
+            android:progressTint="@android:color/holo_orange_light" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_rowSpan="2"
+            android:src="@mipmap/frames_with_bees_01" />
+
+        <TextView
+            android:layout_columnSpan="3"
+            android:layout_marginLeft="75dp"
+            android:text="Frames with bees:  0 / 0"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="285dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_columnSpan="3"
+            android:layout_gravity="top|left"
+            android:progress="50"
+            android:progressTint="@android:color/holo_orange_light" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_rowSpan="2"
+            android:layout_gravity="left|center_vertical"
+            android:src="@mipmap/frames_in_hive_01" />
+
+        <TextView
+            android:layout_columnSpan="3"
+            android:layout_marginLeft="75dp"
+            android:text="Frame slots used:  0 /0"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="285dp"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_columnSpan="3"
+            android:layout_gravity="top|left"
+            android:progress="66"
+            android:progressTint="@android:color/holo_orange_light" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="6"
+            android:layout_rowSpan="2"
+            android:layout_column="0"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/queen_on" />
+
+        <TextView
+            android:layout_rowSpan="2"
+            android:layout_columnSpan="3"
+            android:layout_marginLeft="75dp"
+            android:text="Queen: - years old"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <!-- 4th row (6-7th) -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="8"
+            android:layout_rowSpan="2"
+            android:layout_column="0"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/worm_on" />
+
+        <TextView
+            android:layout_rowSpan="2"
+            android:layout_columnSpan="3"
+            android:layout_marginLeft="75dp"
+            android:text="Fiasítás: - - -"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <ImageView
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="10"
+            android:layout_rowSpan="2"
+            android:layout_column="0"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/honey_on" />
+
+        <TextView
+            android:layout_rowSpan="2"
+            android:layout_columnSpan="3"
+            android:layout_marginLeft="75dp"
+            android:text="Honey: -- kg"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="12"
+            android:layout_rowSpan="2"
+            android:layout_column="0"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/food_on" />
+
+        <TextView
+            android:layout_rowSpan="2"
+            android:layout_columnSpan="3"
+            android:layout_marginLeft="75dp"
+            android:text="Last fed at: ---- -- -- (- days ago)"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <ImageView
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="14"
+            android:layout_rowSpan="2"
+            android:layout_column="0"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/icon_warning_on" />
+
+        <TextView
+            android:layout_rowSpan="2"
+            android:layout_columnSpan="3"
+            android:layout_marginLeft="75dp"
+            android:text="Warnings: nothing"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <Button
+            android:id="@+id/button_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="bottom"
+            android:text="prev"
+            android:textColor="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/button_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="more" />
+
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="back" />
+    </GridLayout>
+
+
+    <!-- 2nd popup -->
+    <GridLayout
+        android:id="@+id/grid_layout_hive_inside_2nd_page"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btHive1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTelep"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/button_prev2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="prev"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/button_more2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="more"
+            android:textColor="@android:color/darker_gray"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/button_back2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_gravity="bottom"
+            android:text="back" />
+
+    </GridLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:onClick="newHive"
+        app:layout_constraintBottom_toTopOf="@+id/btNextHive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+
+</android.support.constraint.ConstraintLayout>
